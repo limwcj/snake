@@ -1,0 +1,221 @@
+@charset "utf-8";
+html,body {
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("../image/bg.png");
+}
+*{
+    margin:0;
+    padding:0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#dialog-tip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    opacity: 0.7;
+    z-index: 1000;
+    display: none;
+    font-family: '黑体';
+}
+.tip-error {
+    color: red;
+    background: #FFC0CB;
+}
+.tip-success {
+    color: green;
+    background: #CCFF99;
+}
+#wrap {
+    border: 1px solid #00CED1;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30px !important;
+}
+.cell {
+    float: left;
+}
+.random {
+    background: red;
+}
+.head {
+    background: #1E90FF !important;
+    border-radius: 50%;
+}
+.tail {
+    background: #FF8C00 !important;
+}
+.body {
+    background: #00CED1;
+}
+#right-wrap {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 250px;
+    font-family: '黑体';
+}
+#right-wrap > div {
+    width: 100%;
+}
+#right-wrap #user {
+    color: #4BD0FD;
+}
+#right-wrap #user span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+#score {
+    color: #FF8C00;
+    font-size: 5em;
+}
+#time {
+    color: #FF8C00;
+}
+#fail {
+    margin-top: 15px;
+    color: red;
+    font-size: 2em;
+    visibility: hidden;
+}
+#menu {
+    width: 100%;
+}
+#menu div {
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    background: red;
+    border-radius: 5px;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 20px !important;
+}
+#menu div:hover {
+    background: #CC3333;
+    cursor: pointer;
+}
+.menu-active {
+    background: #FF9900 !important;
+}
+#directions {
+    position: relative;
+    height: 78px;
+    margin-top: 20px;
+}
+#directions div {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid red;
+    border-radius: 5px;
+    line-height: 30px;
+    color: #666;
+}
+.up {
+    top: 0;
+    left: 110px;
+}
+.left {
+    top: 44px;
+    left: 66px;
+}
+.down {
+    top: 44px;
+    left: 110px;
+}
+.right {
+    top: 44px;
+    left: 155px;
+}
+#left-wrap {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 300px;
+    font-family: '黑体';
+}
+.rank {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    opacity: 0.7;
+    border-radius: 5px;
+    background: #CC99FF;
+    font-size: 0.9em;
+}
+.rank > span {
+    display: block;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rank > span:nth-child(1) {
+    color: gold;
+    font-size: 2em;
+    font-style: italic;
+    width: 13%;
+}
+.rank > span:nth-child(2) {
+    color: #fff;
+    width: 44%;
+}
+.rank > span:nth-child(3) {
+    color: #fff;
+    width: 14%;
+}
+.rank > span:nth-child(4) {
+    color: #fff;
+    width: 29%;
+}
+.rank:nth-child(1) {
+    background-image: -webkit-linear-gradient(left, red, yellow 25%, red 50%, yellow 75%, red);
+    animation: colorful 4s infinite linear;
+    background-size: 200% 100%;
+}
+@keyframes colorful {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+.rank:nth-child(2) {
+    background: #3399FF;
+}
+.rank:nth-child(3) {
+    background: #00CED1;
+}
+#rank-title {
+    font-size: 2em;
+    background-image: -webkit-linear-gradient(left, red, yellow 25%, red 50%, yellow 75%, red);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    -webkit-animation: colorful 4s infinite linear;
+}
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+    #rank-title {
+        background-image: -webkit-linear-gradient(left, red, yellow 25%, red 50%, yellow 75%, red);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-background-size: 200% 100%;
+        -webkit-animation: colorful 4s infinite linear;
+    }
+}
+.rank-empty {
+    color: #e0e0e0;
+}

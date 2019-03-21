@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>贪吃蛇</title>
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+    <meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <meta HTTP-EQUIV="expires" CONTENT="0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="image/favicon.ico" rel="bookmark" type="image/x-icon">
+    <link href="image/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="image/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css?v=201810311712">
+    <link rel="stylesheet" type="text/css" href="js/login/login.css?v=201811091925">
+    <script src="js/lm.js?v=201810311712"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="wrap"></div>
+<div id="right-wrap">
+    <div id="user">
+        <div><span id="login">登陆</span>&nbsp;<span id="login-out" class="fa fa-1x fa-sign-in"></span></div>
+    </div>
+    <div id="score">0</div>
+    <div id="time"><span class="time-h">00:</span><span class="time-m">00:</span><span class="time-s">00:</span><span class="time-ms">0</span></div>
+    <div id="fail">GAME OVER</div>
+    <div id="menu">
+        <div id="menu-beginEnd">开始</div>
+        <div id="menu-restart">重新开始</div>
+        <div id="menu-ai">弱智AI</div>
+        <div id="menu-smart-ai">机智AI</div>
+        <div id="menu-level-hell">地狱模式</div>
+    </div>
+    <div id="directions">
+        <div class="up">↑</div>
+        <div class="left">←</div>
+        <div class="down">↓</div>
+        <div class="right">→</div>
+    </div>
+</div>
+<div id="left-wrap">
+    <div id="rank-title">排行榜</div>
+    <div id="rank-wrap"><div style="margin-top: 50px;font-size: 1.5em" class="rank-empty">这里空空如也</div></div>
+</div>
+<script src="js/login/login.js?v=201810311712"></script>
+<script src="js/snake.js?v=201811021027"></script>
+</body>
+</html>
