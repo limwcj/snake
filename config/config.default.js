@@ -1,5 +1,5 @@
-'use strict';
-const path = require('path');
+"use strict";
+const path = require("path");
 
 module.exports = appInfo => {
   return {
@@ -7,13 +7,13 @@ module.exports = appInfo => {
       listen: {
         port: 9998,
         workers: 1
-      },
+      }
     },
-    keys: appInfo.name + '_1531993904510_7486',
+    keys: appInfo.name + "_test",
     logger: {
-      consoleLevel: 'warn',
-      level: 'warn',
-      dir: path.join(appInfo.baseDir, 'logs')
+      consoleLevel: "warn",
+      level: "warn",
+      dir: path.join(appInfo.baseDir, "logs")
     },
     logrotator: {
       maxDays: 3
@@ -21,33 +21,32 @@ module.exports = appInfo => {
     mysql: {
       clients: {
         user: {
-          database: 'lm_user',
+          database: "lm_user"
         },
         rank: {
-          database: 'lm_rank',
-        },
+          database: "lm_rank"
+        }
       },
       default: {
-        host: '212.64.7.20',
-        port: '3306',
-        user: 'root',
-        password: '926425',
+        host: "localhost",
+        port: "3306",
+        user: "root",
+        password: "password",
         supportBigNumbers: true
       }
     },
     session: {
-      key: 'lm',
-      maxAge: 7 * 24 * 3600 * 1000,
+      key: "lm",
+      maxAge: 7 * 24 * 3600 * 1000
     },
     middleware: [],
     redis: {
       client: {
-        host: '212.64.7.20',
+        host: "localhost",
         port: 6379,
-        password: 'lim926425',
-        db: 0,
+        password: "password",
+        db: 0
       }
-    },
-    illegalWords: ['饭团', '匿名用户', '投票', '随机', '弱智AI', '机智AI'],
+    }
   };
 };
